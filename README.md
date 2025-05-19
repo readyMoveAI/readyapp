@@ -86,55 +86,56 @@ Ready's competitive edge comes from:
 
 ### Prerequisites
 
-* Python 3.8+
-* Node.js 16+
-* MongoDB
-* OpenAI API key
+* Node.js 20+ (LTS version recommended)
+* npm or yarn
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ready-ily/Ready-PoC.git
-   cd Ready-PoC
+   git clone https://github.com/Ready-ily/readyapp.git
+   cd readyapp
    ```
 
-2. Set up the backend:
+2. Install dependencies:
    ```bash
-   cd backend
-   python -m venv venv
-   source venv/bin/activate  # On macOS/Linux
-   # venv\Scripts\activate  # On Windows
-   pip install -r requirements.txt
-   ```
-
-3. Configure environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your API keys and configuration
-   ```
-
-4. Set up the frontend:
-   ```bash
-   cd ../frontend
    npm install
+   # or
+   yarn install
+   ```
+
+3. Configure environment variables (if needed):
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local file with your configuration
    ```
 
 ### Running the Application
 
-1. Start the backend server:
+1. Start the development server:
    ```bash
-   cd backend
-   python app.py
-   ```
-
-2. Start the frontend development server:
-   ```bash
-   cd frontend
    npm run dev
+   # or
+   yarn dev
    ```
 
-3. Access the application at http://localhost:3000
+2. Access the application at http://localhost:3000
+
+### Building for Production
+
+1. Build the application:
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+2. Start the production server:
+   ```bash
+   npm run start
+   # or
+   yarn start
+   ```
 
 ## 📞 Contact
 
