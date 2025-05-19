@@ -1,6 +1,4 @@
-<!-- # <img src="images/logo.png" alt="Ready Logo" width="60" height="60" align="center">  -->
-
-# Ready - AI-Powered Moving Assistant
+# <img src="public/waterbuffalo.svg" alt="Ready Logo" width="60" height="60" align="center"> Ready - AI-Powered Moving Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Status: PoC](https://img.shields.io/badge/Status-Proof%20of%20Concept-orange)](https://github.com/Ready-PoC)
