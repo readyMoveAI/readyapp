@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- # <img src="images/logo.png" alt="Ready Logo" width="60" height="60" align="center">  -->
 
-## Getting Started
+# Ready - AI-Powered Moving Assistant
 
-First, run the development server:
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Status: PoC](https://img.shields.io/badge/Status-Proof%20of%20Concept-orange)](https://github.com/Ready-PoC)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <strong>Founded by:</strong> Yinuo Geng, Kevin Logan, and Joshua Lee
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Ready** is an AI-powered moving assistant designed to transform the relocation experience by reducing complexity and streamlining logistics in one centralized platform. By leveraging advanced AI recommendations, automation, and personalized support, Ready simplifies the moving process for young professionals and families.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This proof of concept (PoC) demonstrates the core functionalities and potential of Ready, showcasing key aspects of our innovative approach to solving common moving challenges.
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- **AI-Driven Recommendations** - Personalized neighborhood matching and service provider suggestions
+- **Automated Task Management** - Smart checklists and timelines customized to your move
+- **Real-Time Coordination** - Integrated scheduling and communication with service providers
+- **Post-Move Support** - Seamless transition assistance after relocation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📊 Business Model (Lean Canvas)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1️⃣ Problem
+Moving is inherently stressful, requiring coordination of multiple services, complex scheduling, and critical decision-making under time pressure. Existing solutions are fragmented, forcing users to navigate numerous tools without a unified system. Ready addresses this by centralizing and automating essential moving tasks, providing personalization and comprehensive coordination.
 
-## Deploy on Vercel
+### 2️⃣ Existing Alternatives
+Traditional methods like checklists, task management apps, and assistant services address only parts of the moving journey. Ready differentiates by offering an end-to-end, AI-driven solution that adapts to individual needs, providing automation, real-time tracking, and seamless integration through a unified platform.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3️⃣ Customer Segments
+Ready targets individuals and families relocating due to job transitions, corporate assignments, or lifestyle changes. These users prioritize convenience, efficiency, and structured processes that minimize disruption to their personal and professional lives.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4️⃣ Unique Value Proposition
+Ready transforms moving into a seamless journey through:
+- Personalized guidance and recommendations
+- Automated task management
+- Real-time service coordination
+- Reduced decision fatigue
+- Optimized time management
+
+### 5️⃣ Solution Components
+- **AI-Powered Neighborhood Matching** - Find your ideal location based on preferences
+- **Smart Checklists** - Automatically generated and prioritized moving tasks
+- **Real-Time Tracking** - Monitor all aspects of your move from one dashboard
+- **Post-Move Guidance** - Seamless integration into your new community
+
+### 6️⃣ Channels
+Ready reaches users through:
+- Organic content marketing (SEO, blogs, social media)
+- Strategic partnerships with HR relocation teams
+- Realtor and moving company affiliations
+- Targeted digital advertising
+
+### 7️⃣ Revenue Streams
+- Freemium model with basic services offered at no cost
+- Premium AI-driven planning features
+- Assistant service fees
+- Commission-based partnerships with moving-related businesses
+
+### 8️⃣ Cost Structure
+- AI and software development
+- Cloud infrastructure
+- Customer acquisition
+- Strategic partnerships
+- Lean operations with emphasis on automation
+
+### 9️⃣ Key Metrics
+- Customer acquisition rates
+- User engagement levels
+- Customer retention
+- Revenue growth
+- User satisfaction and NPS
+
+### 🔟 Unfair Advantage
+Ready's competitive edge comes from:
+- Proprietary AI-driven relocation matching algorithms
+- Adaptive user profiles and personalization
+- Automated workflows for service coordination
+- Scalable nationwide platform
+- Potential for expansion into adjacent markets
+
+## 💻 Technical Implementation
+
+### Prerequisites
+
+* Python 3.8+
+* Node.js 16+
+* MongoDB
+* OpenAI API key
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ready-ily/Ready-PoC.git
+   cd Ready-PoC
+   ```
+
+2. Set up the backend:
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   # venv\Scripts\activate  # On Windows
+   pip install -r requirements.txt
+   ```
+
+3. Configure environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env file with your API keys and configuration
+   ```
+
+4. Set up the frontend:
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+
+### Running the Application
+
+1. Start the backend server:
+   ```bash
+   cd backend
+   python app.py
+   ```
+
+2. Start the frontend development server:
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+3. Access the application at http://localhost:3000
+
+## 📞 Contact
+
+For questions or feedback, please reach out to the Ready team at [contact@readymove.ai](mailto:contact@readymove.ai).
+
+---
+
+<p align="center">© 2025 Ready. All rights reserved.</p>
