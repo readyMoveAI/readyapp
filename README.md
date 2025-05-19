@@ -93,7 +93,7 @@ Ready's competitive edge comes from:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ready-ily/readyapp.git
+   git clone https://github.com/readyMoveAI/readyapp.git
    cd readyapp
    ```
 
