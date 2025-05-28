@@ -96,10 +96,19 @@ Ready's competitive edge comes from:
    ```
 
 2. Install dependencies:
+
+   **Client**:
    ```bash
    npm install
    # or
    yarn install
+   ```
+
+   **Server**:
+   ```bash
+   python3 -m vevn ready_venv
+   source ready_venv/bin/activate
+   pip install -r app/backend/requirements.txt
    ```
 
 3. Configure environment variables (if needed):
@@ -111,10 +120,17 @@ Ready's competitive edge comes from:
 ### Running the Application
 
 1. Start the development server:
+
+   **Client:**
    ```bash
    npm run dev
    # or
    yarn dev
+   ```
+
+   **Server:**
+   ```bash
+   python3 app/backend/app.py
    ```
 
 2. Access the application at http://localhost:3000
