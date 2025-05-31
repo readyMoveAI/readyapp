@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ready - AI-Powered Moving Assistant",
   description: "Transform your relocation experience with AI-driven recommendations and automated task management",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
