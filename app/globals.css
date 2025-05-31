@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
+  /* Color Scheme 1 - Default Light */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #f2f2f2;
+  --text: #000000;
+  --border: rgba(0, 0, 0, 0.15);
+  --accent: #00796b;
 }
 
 @theme inline {
+  /* Primitive Colors - Neutrals */
+  --color-neutral-white: #ffffff;
+  --color-neutral-lightest: #f2f2f2;
+  --color-neutral-lighter: #d8d8d8;
+  --color-neutral-light: #b2b2b2;
+  --color-neutral: #7f7f7f;
+  --color-neutral-dark: #4c4c4c;
+  --color-neutral-darker: #191919;
+  --color-neutral-darkest: #000000;
+
+  /* Primitive Colors - Pine Green */
+  --color-pine-lightest: #e5f1f0;
+  --color-pine-lighter: #cce4e1;
+  --color-pine-light: #4ca197;
+  --color-pine: #00796b;
+  --color-pine-dark: #006055;
+  --color-pine-darker: #00302a;
+  --color-pine-darkest: #002420;
+
+  /* Primitive Colors - Wild Strawberry */
+  --color-strawberry-lightest: #ffebf2;
+  --color-strawberry-lighter: #ffd8e5;
+  --color-strawberry-light: #ff79a6;
+  --color-strawberry: #ff4081;
+  --color-strawberry-dark: #cc3367;
+  --color-strawberry-darker: #661933;
+  --color-strawberry-darkest: #4c1326;
+
+  /* Color Scheme Variables */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text: var(--text);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+
+  /* Typography */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Color Scheme 2 - Pine Light */
+[data-theme="pine-light"] {
+  --background: #cce4e1;
+  --foreground: #e5f1f0;
+  --text: #000000;
+  --border: rgba(0, 0, 0, 0.15);
+  --accent: #00796b;
+}
+
+/* Color Scheme 3 - Pine Dark */
+[data-theme="pine-dark"] {
+  --background: #006055;
+  --foreground: #00796b;
+  --text: #ffffff;
+  --border: rgba(255, 255, 255, 0.2);
+  --accent: #ffffff;
+}
+
+/* Color Scheme 4 - Pine Minimal */
+[data-theme="pine-minimal"] {
+  --background: #e5f1f0;
+  --foreground: #cce4e1;
+  --text: #000000;
+  --border: rgba(0, 0, 0, 0.15);
+  --accent: #00796b;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #006055;
+    --foreground: #00796b;
+    --text: #ffffff;
+    --border: rgba(255, 255, 255, 0.2);
+    --accent: #ffffff;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
