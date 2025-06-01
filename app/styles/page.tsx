@@ -1,14 +1,111 @@
+import Navbar from '../components/Navbar';
+
 export default function StylesPage() {
   return (
-    <div className="min-h-screen bg-background text-text p-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <header className="mb-12">
-          <h1 className="mb-4">Ready Design System</h1>
-          <p className="text-tagline text-neutral-dark">
-            A comprehensive showcase of our branded colors and typography
-          </p>
-        </header>
+    <div className="min-h-screen bg-background text-text">
+      {/* Navbar Component Showcase */}
+      <Navbar 
+        items={[
+          { label: 'Home', href: '/', isActive: false },
+          { label: 'Styles', href: '/styles', isActive: true },
+          { label: 'City', href: '/city', isActive: false },
+        ]}
+      />
+      
+      <div className="p-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <header className="mb-12">
+            <h1 className="mb-4">Ready Design System</h1>
+            <p className="text-tagline text-neutral-dark">
+              A comprehensive showcase of our branded colors, typography, and components
+            </p>
+          </header>
+
+          {/* Navbar Component Section */}
+          <section className="mb-16">
+            <h2 className="mb-8 text-pine">Navigation Component</h2>
+            
+            <div className="space-y-8">
+              {/* Default Variant */}
+              <div>
+                <h3 className="mb-4 text-strawberry">Default Navbar</h3>
+                <p className="text-medium mb-4 text-neutral-dark">
+                  The default navbar variant with foreground background and pine accent colors.
+                </p>
+                <div className="border border-neutral-light rounded-lg overflow-hidden">
+                  <Navbar 
+                    variant="default"
+                    items={[
+                      { label: 'Home', href: '/', isActive: false },
+                      { label: 'About', href: '/about', isActive: true },
+                      { label: 'Services', href: '/services', isActive: false },
+                      { label: 'Contact', href: '/contact', isActive: false },
+                    ]}
+                  />
+                </div>
+              </div>
+
+              {/* Minimal Variant */}
+              <div>
+                <h3 className="mb-4 text-strawberry">Minimal Navbar</h3>
+                <p className="text-medium mb-4 text-neutral-dark">
+                  A clean minimal variant with background color and subtle borders.
+                </p>
+                <div className="border border-neutral-light rounded-lg overflow-hidden">
+                  <Navbar 
+                    variant="minimal"
+                    items={[
+                      { label: 'Dashboard', href: '/dashboard', isActive: true },
+                      { label: 'Analytics', href: '/analytics', isActive: false },
+                      { label: 'Settings', href: '/settings', isActive: false },
+                    ]}
+                  />
+                </div>
+              </div>
+
+              {/* Dark Variant */}
+              <div>
+                <h3 className="mb-4 text-strawberry">Dark Navbar</h3>
+                <p className="text-medium mb-4 text-neutral-dark">
+                  A dark variant using pine-dark background with white text and accents.
+                </p>
+                <div className="border border-neutral-light rounded-lg overflow-hidden">
+                  <Navbar 
+                    variant="dark"
+                    logo={{ href: '/' }}
+                    items={[
+                      { label: 'Projects', href: '/projects', isActive: false },
+                      { label: 'Team', href: '/team', isActive: true },
+                      { label: 'Reports', href: '/reports', isActive: false },
+                      { label: 'Admin', href: '/admin', isActive: false },
+                    ]}
+                  />
+                </div>
+              </div>
+
+              {/* Usage Code Example */}
+              <div className="p-6 bg-foreground rounded-lg border border-neutral-light">
+                <h4 className="mb-4 text-strawberry">Usage Example</h4>
+                <pre className="text-small bg-neutral-darker text-white p-4 rounded overflow-x-auto">
+{`import Navbar from '../components/Navbar';
+
+// Basic usage
+<Navbar />
+
+// With custom props
+<Navbar 
+  variant="dark"
+  logo={{ href: '/' }}
+  items={[
+    { label: 'Home', href: '/', isActive: true },
+    { label: 'About', href: '/about', isActive: false },
+  ]}
+/>`}
+                </pre>
+              </div>
+            </div>
+          </section>
 
         {/* Typography Section */}
         <section className="mb-16">
@@ -326,6 +423,7 @@ export default function StylesPage() {
             <span className="text-strawberry font-medium">Montserrat</span>
           </p>
         </footer>
+        </div>
       </div>
     </div>
   );
