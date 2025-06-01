@@ -3,14 +3,6 @@ import Navbar from '../components/Navbar';
 export default function StylesPage() {
   return (
     <div className="min-h-screen bg-background text-text">
-      {/* Navbar Component Showcase */}
-      <Navbar 
-        items={[
-          { label: 'Home', href: '/', isActive: false },
-          { label: 'Styles', href: '/styles', isActive: true },
-          { label: 'City', href: '/city', isActive: false },
-        ]}
-      />
       
       <div className="p-8">
         <div className="max-w-6xl mx-auto">
