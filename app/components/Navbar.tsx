@@ -44,11 +44,11 @@ export default function Navbar({
   const getVariantClasses = () => {
     switch (variant) {
       case 'minimal':
-        return 'bg-background border-b border-neutral-light';
+        return 'bg-background elevation-1 border-b border-neutral-light';
       case 'dark':
-        return 'bg-pine-dark text-white border-b border-pine';
+        return 'bg-pine-dark text-white elevation-2 border-b border-pine';
       default:
-        return 'bg-foreground border-b border-neutral-light';
+        return 'surface-2 border-b border-neutral-light';
     }
   };
 
@@ -65,8 +65,8 @@ export default function Navbar({
     
     return `${baseClasses} ${
       isActive 
-        ? 'text-pine border-b-2 border-pine pb-1' 
-        : 'text-neutral-dark hover:text-pine'
+        ? 'text-pine-darkest border-b-2 border-pine-darkest pb-1' 
+        : 'text-neutral-darkest hover:text-pine-darkest'
     }`;
   };
 

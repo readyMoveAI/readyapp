@@ -3,8 +3,7 @@ import Navbar from '../components/Navbar';
 export default function StylesPage() {
   return (
     <div className="min-h-screen bg-background text-text">
-      
-      <div className="p-8">
+      <div className="spacing-2xl">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <header className="mb-12">
@@ -25,7 +24,7 @@ export default function StylesPage() {
                 <p className="text-medium mb-4 text-neutral-dark">
                   The default navbar variant with foreground background and pine accent colors.
                 </p>
-                <div className="border border-neutral-light rounded-lg overflow-hidden">
+                <div className="material-card overflow-hidden">
                   <Navbar 
                     variant="default"
                     items={[
@@ -44,7 +43,7 @@ export default function StylesPage() {
                 <p className="text-medium mb-4 text-neutral-dark">
                   A clean minimal variant with background color and subtle borders.
                 </p>
-                <div className="border border-neutral-light rounded-lg overflow-hidden">
+                <div className="material-card overflow-hidden">
                   <Navbar 
                     variant="minimal"
                     items={[
@@ -62,7 +61,7 @@ export default function StylesPage() {
                 <p className="text-medium mb-4 text-neutral-dark">
                   A dark variant using pine-dark background with white text and accents.
                 </p>
-                <div className="border border-neutral-light rounded-lg overflow-hidden">
+                <div className="material-card-elevated overflow-hidden">
                   <Navbar 
                     variant="dark"
                     logo={{ href: '/' }}
@@ -77,9 +76,9 @@ export default function StylesPage() {
               </div>
 
               {/* Usage Code Example */}
-              <div className="p-6 bg-foreground rounded-lg border border-neutral-light">
+              <div className="material-card spacing-lg">
                 <h4 className="mb-4 text-strawberry">Usage Example</h4>
-                <pre className="text-small bg-neutral-darker text-white p-4 rounded overflow-x-auto">
+                <pre className="text-small bg-neutral-darker text-white spacing-md rounded-material-md overflow-x-auto">
 {`import Navbar from '../components/Navbar';
 
 // Basic usage
@@ -368,25 +367,25 @@ export default function StylesPage() {
           
           <div className="space-y-8">
             {/* Card Example */}
-            <div className="p-6 bg-foreground rounded-lg border border-neutral-light">
+            <div className="material-card spacing-lg">
               <h4 className="mb-4 text-strawberry">Example Card Component</h4>
               <p className="text-medium mb-4">
                 This card demonstrates how our typography and colors work together. 
                 The heading uses <span className="font-semibold">Crete Round</span> while 
                 the body text uses <span className="font-medium">Montserrat</span>.
               </p>
-              <div className="flex gap-4">
-                <button className="px-4 py-2 bg-pine text-white text-regular font-medium rounded-lg hover:bg-pine-dark transition-colors">
+              <div className="flex gap-md">
+                <button className="btn-material btn-material-primary ripple">
                   Primary Action
                 </button>
-                <button className="px-4 py-2 bg-strawberry text-white text-regular font-medium rounded-lg hover:bg-strawberry-dark transition-colors">
+                <button className="btn-material btn-material-secondary ripple">
                   Secondary Action
                 </button>
               </div>
             </div>
 
             {/* Text Hierarchy Example */}
-            <div className="p-6 bg-foreground rounded-lg border border-neutral-light">
+            <div className="material-card spacing-lg">
               <h3 className="mb-4 text-pine">Content Hierarchy Example</h3>
               <p className="text-tagline font-medium mb-4 text-strawberry">
                 This is a tagline that introduces the content below
