@@ -9,13 +9,13 @@
 
 ## 👥 Team
 
-**Yinuo Geng** - Co-Founder  
+**Yinuo Geng** - Co-Founder & CEO  
 📧 yinuo@readymove.ai
 
 **Kevin Logan** - Co-Founder & CTO  
 📧 kevin@readymove.ai
 
-**Joshua Lee** - Co-Founder  
+**Joshua Lee** - Co-Founder & COO  
 📧 joshua@readymove.ai
 
 ## 🚀 Overview
