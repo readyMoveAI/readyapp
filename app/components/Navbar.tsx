@@ -18,6 +18,8 @@ interface NavbarProps {
   items?: NavItem[];
   variant?: 'default' | 'minimal' | 'dark';
   className?: string;
+  hideLogo?: boolean;
+  sideNavWidth?: 'sm' | 'md' | 'lg' | 'collapsed';
 }
 
 export default function Navbar({ 
@@ -28,7 +30,9 @@ export default function Navbar({
     { label: 'City', href: '/city' },
   ],
   variant = 'default',
-  className = ''
+  className = '',
+  hideLogo = false,
+  sideNavWidth
 }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -99,24 +103,41 @@ export default function Navbar({
     return variant === 'dark' ? 'text-white' : 'text-neutral-dark';
   };
 
+  const getNavbarMargin = () => {
+    if (!sideNavWidth) return '';
+    
+    switch (sideNavWidth) {
+      case 'sm':
+        return 'ml-48';
+      case 'lg':
+        return 'ml-80';
+      case 'collapsed':
+        return 'ml-16';
+      default:
+        return 'ml-64';
+    }
+  };
+
   return (
-    <nav className={`${getVariantClasses()} ${className}`}>
+    <nav className={`${getVariantClasses()} ${className} ${getNavbarMargin()} transition-all duration-300 ease-in-out`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href={logo.href || '/'} className="block">
-              <Image
-                src="/ready..svg"
-                alt="Ready"
-                width={80}
-                height={30}
-                className="h-8 w-auto transition-all duration-200 hover:opacity-80"
-                style={{ filter: getLogoFilter() }}
-                priority
-              />
-            </Link>
-          </div>
+          {!hideLogo && (
+            <div className="flex-shrink-0">
+              <Link href={logo.href || '/'} className="block">
+                <Image
+                  src="/ready..svg"
+                  alt="Ready"
+                  width={80}
+                  height={30}
+                  className="h-8 w-auto transition-all duration-200 hover:opacity-80"
+                  style={{ filter: getLogoFilter() }}
+                  priority
+                />
+              </Link>
+            </div>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
