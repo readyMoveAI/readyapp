@@ -79,12 +79,9 @@ export default function Navbar({
   };
 
   const getLogoFilter = () => {
-    // The SVG is already strawberry colored (#FF4081)
     if (variant === 'dark') {
-      // For dark variant, make it white
       return 'brightness(0) invert(1)';
     }
-    // For default and minimal, keep the original strawberry color
     return 'none';
   };
 
@@ -134,7 +131,6 @@ export default function Navbar({
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              {/* Hamburger icon */}
               <svg
                 className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
