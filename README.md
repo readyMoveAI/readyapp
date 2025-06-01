@@ -171,7 +171,7 @@ Ready's competitive edge comes from our **Data Flywheel Effect**:
 
 2. Access the full application at http://localhost:3000
 
-### Project Structure
+### Current Project Structure (6-1-2025)
 
 ```
 readyapp/
