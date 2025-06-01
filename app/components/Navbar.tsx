@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -22,14 +23,23 @@ interface NavbarProps {
 export default function Navbar({ 
   logo = { href: '/' },
   items = [
-    { label: 'Home', href: '/', isActive: false },
-    { label: 'Styles', href: '/styles', isActive: true },
-    { label: 'City', href: '/city', isActive: false },
+    { label: 'Home', href: '/' },
+    { label: 'Styles', href: '/styles' },
+    { label: 'City', href: '/city' },
   ],
   variant = 'default',
   className = ''
 }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Determine if a nav item is active based on current pathname
+  const isItemActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
 
   const getVariantClasses = () => {
     switch (variant) {
@@ -115,7 +125,7 @@ export default function Navbar({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={getLinkClasses(item.isActive || false)}
+                  className={getLinkClasses(isItemActive(item.href))}
                 >
                   {item.label}
                 </Link>
@@ -168,7 +178,7 @@ export default function Navbar({
               <Link
                 key={item.href}
                 href={item.href}
-                className={getMobileLinkClasses(item.isActive || false)}
+                className={getMobileLinkClasses(isItemActive(item.href))}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
