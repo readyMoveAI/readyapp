@@ -370,6 +370,7 @@ h1, .h1 {
   font-size: var(--font-size-h1-mobile);
   line-height: var(--line-height-heading-tight);
   font-weight: var(--font-weight-normal);
+  color: var(--color-pine-darkest);
 }
 
 h2, .h2 {
@@ -377,6 +378,7 @@ h2, .h2 {
   font-size: var(--font-size-h2-mobile);
   line-height: var(--line-height-heading-tight);
   font-weight: var(--font-weight-normal);
+  color: var(--color-strawberry-darkest);
 }
 
 h3, .h3 {
@@ -384,6 +386,7 @@ h3, .h3 {
   font-size: var(--font-size-h3-mobile);
   line-height: var(--line-height-heading-normal);
   font-weight: var(--font-weight-normal);
+  color: var(--color-pine-darkest);
 }
 
 h4, .h4 {
@@ -391,6 +394,7 @@ h4, .h4 {
   font-size: var(--font-size-h4-mobile);
   line-height: var(--line-height-heading-relaxed);
   font-weight: var(--font-weight-normal);
+  color: var(--color-strawberry-darkest);
 }
 
 h5, .h5 {
@@ -398,6 +402,7 @@ h5, .h5 {
   font-size: var(--font-size-h5-mobile);
   line-height: var(--line-height-heading-relaxed);
   font-weight: var(--font-weight-normal);
+  color: var(--color-pine-darkest);
 }
 
 h6, .h6 {
@@ -405,6 +410,7 @@ h6, .h6 {
   font-size: var(--font-size-h6-mobile);
   line-height: var(--line-height-body);
   font-weight: var(--font-weight-normal);
+  color: var(--color-strawberry-darkest);
 }
 
 /* Text Sizes */
@@ -450,26 +456,32 @@ h6, .h6 {
 @media (min-width: 768px) {
   h1, .h1 {
     font-size: var(--font-size-h1-desktop);
+    color: var(--color-pine-darkest);
   }
   
   h2, .h2 {
     font-size: var(--font-size-h2-desktop);
+    color: var(--color-strawberry-darkest);
   }
   
   h3, .h3 {
     font-size: var(--font-size-h3-desktop);
+    color: var(--color-pine-darkest);
   }
   
   h4, .h4 {
     font-size: var(--font-size-h4-desktop);
+    color: var(--color-strawberry-darkest);
   }
   
   h5, .h5 {
     font-size: var(--font-size-h5-desktop);
+    color: var(--color-pine-darkest);
   }
   
   h6, .h6 {
     font-size: var(--font-size-h6-desktop);
+    color: var(--color-strawberry-darkest);
   }
   
   .text-tagline {
