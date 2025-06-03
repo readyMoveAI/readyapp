@@ -192,21 +192,23 @@ export default function SideNav({
 
   return (
     <div className={`${getWidthClasses()} ${getVariantClasses()} ${className} h-screen flex flex-col transition-all duration-300 ease-in-out fixed left-0 top-0 z-40`}>
-      {/* Header with centered logo and collapse button */}
-      <div className="flex flex-col items-center p-4 border-b border-neutral-light">
+      {/* Header with logo and inline collapse button */}
+      <div className="flex items-center justify-between p-4 border-b border-neutral-light">
         {/* Centered Logo */}
         {!isCollapsed && logo.src && (
-          <Link href={logo.href || '/'} className="block mb-3">
-            <Image
-              src={logo.src}
-              alt={logo.alt || 'Logo'}
-              width={logo.width || 80}
-              height={logo.height || 30}
-              className="h-8 w-auto transition-all duration-200 hover:opacity-80"
-              style={{ filter: getLogoFilter() }}
-              priority
-            />
-          </Link>
+          <div className="flex-1 flex justify-center">
+            <Link href={logo.href || '/'} className="block">
+              <Image
+                src={logo.src}
+                alt={logo.alt || 'Logo'}
+                width={logo.width || 80}
+                height={logo.height || 30}
+                className="h-8 w-auto transition-all duration-200 hover:opacity-80"
+                style={{ filter: getLogoFilter() }}
+                priority
+              />
+            </Link>
+          </div>
         )}
         
         {/* Collapse Button */}
@@ -221,7 +223,7 @@ export default function SideNav({
               variant === 'dark' 
                 ? 'text-white hover:bg-pine' 
                 : 'text-neutral-dark hover:bg-neutral-light'
-            }`}
+            } ${isCollapsed ? 'mx-auto' : ''}`}
             title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
             <svg
