@@ -192,10 +192,11 @@ export default function SideNav({
 
   return (
     <div className={`${getWidthClasses()} ${getVariantClasses()} ${className} h-screen flex flex-col transition-all duration-300 ease-in-out fixed left-0 top-0 z-40`}>
-      {/* Header with logo and collapse button */}
-      <div className="flex items-center justify-between p-4 border-b border-neutral-light">
+      {/* Header with centered logo and collapse button */}
+      <div className="flex flex-col items-center p-4 border-b border-neutral-light">
+        {/* Centered Logo */}
         {!isCollapsed && logo.src && (
-          <Link href={logo.href || '/'} className="block">
+          <Link href={logo.href || '/'} className="block mb-3">
             <Image
               src={logo.src}
               alt={logo.alt || 'Logo'}
@@ -208,6 +209,7 @@ export default function SideNav({
           </Link>
         )}
         
+        {/* Collapse Button */}
         {isCollapsible && (
           <button
             onClick={() => {
@@ -219,7 +221,7 @@ export default function SideNav({
               variant === 'dark' 
                 ? 'text-white hover:bg-pine' 
                 : 'text-neutral-dark hover:bg-neutral-light'
-            } ${isCollapsed ? 'mx-auto' : ''}`}
+            }`}
             title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
             <svg
