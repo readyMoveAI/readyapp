@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSideNav } from './SideNavContext';
 
 interface SideNavItem {
   label: string;
@@ -49,9 +50,25 @@ export default function SideNav({
   width = 'md',
   onCollapseChange
 }: SideNavProps) {
-  const [isCollapsed, setIsCollapsed] = useState(defaultCollapsed);
+  const { isCollapsed, setIsCollapsed, width: contextWidth, setWidth, setIsActive } = useSideNav();
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const pathname = usePathname();
+  
+  // Set the component as active when it mounts
+  useEffect(() => {
+    setIsActive(true);
+    return () => setIsActive(false);
+  }, [setIsActive]);
+  
+  // Sync width with context
+  useEffect(() => {
+    setWidth(width);
+  }, [width, setWidth]);
+  
+  // Initialize collapsed state
+  useEffect(() => {
+    setIsCollapsed(defaultCollapsed);
+  }, [defaultCollapsed, setIsCollapsed]);
 
   // Determine if a nav item is active based on current pathname
   const isItemActive = (href: string) => {
@@ -192,22 +209,26 @@ export default function SideNav({
 
   return (
     <div className={`${getWidthClasses()} ${getVariantClasses()} ${className} h-screen flex flex-col transition-all duration-300 ease-in-out fixed left-0 top-0 z-40`}>
-      {/* Header with logo and collapse button */}
+      {/* Header with logo and inline collapse button */}
       <div className="flex items-center justify-between p-4 border-b border-neutral-light">
+        {/* Centered Logo */}
         {!isCollapsed && logo.src && (
-          <Link href={logo.href || '/'} className="block">
-            <Image
-              src={logo.src}
-              alt={logo.alt || 'Logo'}
-              width={logo.width || 80}
-              height={logo.height || 30}
-              className="h-8 w-auto transition-all duration-200 hover:opacity-80"
-              style={{ filter: getLogoFilter() }}
-              priority
-            />
-          </Link>
+          <div className="flex-1 flex justify-center">
+            <Link href={logo.href || '/'} className="block">
+              <Image
+                src={logo.src}
+                alt={logo.alt || 'Logo'}
+                width={logo.width || 80}
+                height={logo.height || 30}
+                className="h-8 w-auto transition-all duration-200 hover:opacity-80"
+                style={{ filter: getLogoFilter() }}
+                priority
+              />
+            </Link>
+          </div>
         )}
         
+        {/* Collapse Button */}
         {isCollapsible && (
           <button
             onClick={() => {

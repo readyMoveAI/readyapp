@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Crete_Round, Montserrat } from "next/font/google";
 import "./globals.css";
 import LayoutNavbar from "./components/LayoutNavbar";
+import Footer from "./components/Footer";
 import { SideNavProvider } from "./components/SideNavContext";
 
 const geistSans = Geist({
@@ -42,11 +43,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${creteRound.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${creteRound.variable} ${montserrat.variable} antialiased min-h-screen flex flex-col`}
       >
         <SideNavProvider>
           <LayoutNavbar />
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
         </SideNavProvider>
       </body>
     </html>
