@@ -16,7 +16,7 @@ export default function Home() {
       <div className="spacing-2xl">
         <div className="max-w-4xl mx-auto">
           <header className="mb-12">
-            <h1 className="mb-4">Ready - AI-Powered Moving Copilot</h1>
+            <h1 className="mb-4">Ready - AI-Powered Moving Platform</h1>
             <p className="text-tagline text-neutral-dark">
               An intelligent, AI-powered moving service designed to transform the traditionally stressful and complex moving process into a seamless, structured, and deeply personalized experience.
             </p>

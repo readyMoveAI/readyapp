@@ -1,4 +1,4 @@
-# <img src="public/waterbuffalo.svg" alt="Ready Logo" width="60" height="60" align="center"> Ready - AI-Powered Moving Copilot
+# <img src="public/waterbuffalo.svg" alt="Ready Logo" width="60" height="60" align="center"> Ready - AI-Powered Moving Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Status: PoC](https://img.shields.io/badge/Status-Proof%20of%20Concept-orange)](https://github.com/Ready-PoC)
@@ -20,7 +20,7 @@
 
 ## 🚀 Overview
 
-**Ready AI** is a Washington D.C.-based artificial intelligence startup, providing a solution that can centralize, simplify, and personalize the moving experience. ReadyAI offers an intelligent, AI-powered moving service designed to transform the traditionally stressful and complex moving process into a seamless, structured, and deeply personalized experience. Our solution functions as an "AI moving copilot," bringing clarity by efficiently structuring the entire relocation journey and then personalizing it with automated support and a comprehensive roadmap.
+**Ready AI** is a Washington D.C.-based artificial intelligence startup, providing a solution that can centralize, simplify, and personalize the moving experience. ReadyAI offers an intelligent, AI-powered moving service designed to transform the traditionally stressful and complex moving process into a seamless, structured, and deeply personalized experience. Our solution functions as an "AI moving Platform," bringing clarity by efficiently structuring the entire relocation journey and then personalizing it with automated support and a comprehensive roadmap.
 
 ### The Problem We're Solving
 
